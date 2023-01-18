@@ -1,0 +1,26 @@
+* Usage
+
+After starting the compose file, you will be able to access:
+
+- grafana: http://localhost:3000
+- prometheus: http://localhost:9090
+
+With Prometheus pinging http://localhost:800/metrics by default (this can be changed in the file `prometheus/prometheus.yml`) and Grafana configured with Prometheus as a datasource.
+
+Volumes presist data between docker compose restarts unless you `docker compose down --volumes`.
+
+Start up the compose file with:
+
+#+begin_src bash
+docker compose up
+
+# grafana    => http://localhost:3000
+# prometheus => http://localhost:9090
+
+
+# grafana container shell:
+# - docker compose exec grafana bash
+
+# prometheus container shell:
+# - docker compose exec prometheus sh
+#+end_src
