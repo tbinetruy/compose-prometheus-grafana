@@ -5,7 +5,7 @@ After starting the compose file, you will be able to access:
 - Grafana: [[http://localhost:3000]] (username: ~admin~, password: ~foobar~)
 - Prometheus: [[http://localhost:9090]]
 
-With Prometheus pinging [[http://localhost:8000/metrics]] by default (this can be changed in the file ~prometheus/prometheus.yml~) and Grafana configured with Prometheus as a datasource.
+With Prometheus scraping [[http://localhost:8000/metrics]] by default (this can be changed in the file ~prometheus/prometheus.yml~) and Grafana configured with Prometheus as a datasource.
 
 Volumes presist data between docker compose restarts unless you ~docker compose down --volumes~.
 
