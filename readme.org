@@ -2,7 +2,7 @@
 
 After starting the compose file, you will be able to access:
 
-- Grafana: [[http://localhost:3000]]
+- Grafana: [[http://localhost:3000]] (username: ~admin~, password: ~admin~)
 - Prometheus: [[http://localhost:9090]]
 
 With Prometheus pinging [[http://localhost:8000/metrics]] by default (this can be changed in the file ~prometheus/prometheus.yml~) and Grafana configured with Prometheus as a datasource.
@@ -24,3 +24,5 @@ docker compose up
 # prometheus container shell:
 # - docker compose exec prometheus sh
 #+end_src
+
+**N.B.**  You can set the Graphana admin password in ~grafana/config.monitoring~, it is set to ~admin~ by default.
